@@ -1,18 +1,21 @@
-import Fastify from 'fastify';
+import fastify from 'fastify';
+import cors from '@fastify/cors';
+
 import homeRoutes from './routers/home.js';
 
 /**
  * @type {import('fastify').FastifyInstance} Instance of Fastify
  */
-const fastify = Fastify({
+const app = fastify({
   logger: true,
 });
 
-fastify.register(homeRoutes);
+app.register(cors, { origin: '*' });
+app.register(homeRoutes);
 
-fastify.listen({ port: 3000 }, function (err, address) {
+app.listen({ port: 5000 }, function (err, address) {
   if (err) {
-    fastify.log.error(err);
+    app.log.error(err);
     process.exit(1);
   }
   // Server is now listening on ${address}
