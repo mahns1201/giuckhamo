@@ -1,0 +1,41 @@
+@import './reset.scss';
+
+.App {
+  header {
+    position: sticky;
+    height: 100px;
+    top: 0;
+
+    nav {
+      width: 1440px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      ul {
+        display: flex;
+        gap: 10px;
+
+        li {
+          cursor: pointer;
+        }
+      }
+    }
+    // temp
+    background-color: aqua;
+  }
+
+  .contents {
+    min-height: calc(100vh - 500px);
+
+    //temp
+    height: 1000px;
+  }
+
+  footer {
+    height: 400px;
+    background-color: blanchedalmond;
+  }
+}
