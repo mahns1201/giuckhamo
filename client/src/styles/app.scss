@@ -1,4 +1,19 @@
-@import './reset.scss';
+@import './common/_reset.scss';
+@import './common/_variables.scss';
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
 
 .App {
   header {
@@ -24,7 +39,7 @@
       }
     }
     // temp
-    background-color: aqua;
+    background-color: $color__primary;
   }
 
   .contents {
@@ -32,6 +47,41 @@
 
     //temp
     height: 1000px;
+
+    .test1 {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      background-color: #fd6d62;
+    }
+
+    .test2 {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      background-color: #ff7f50;
+    }
+
+    .test3 {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      background-color: #ffdd80;
+    }
+
+    .test4 {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      background-color: #bbebd9;
+    }
+
+    .test5 {
+      width: 200px;
+      height: 200px;
+      cursor: pointer;
+      background-color: #c6f0ff;
+    }
   }
 
   footer {
