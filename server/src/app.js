@@ -13,7 +13,7 @@ const app = fastify({
 app.register(cors, { origin: '*' });
 app.register(homeRoutes);
 
-app.listen({ port: 5000 }, function (err, address) {
+app.listen({ port: process.env.PORT | 5000 }, function (err, address) {
   if (err) {
     app.log.error(err);
     process.exit(1);
