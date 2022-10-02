@@ -2,7 +2,11 @@
   "name": "giuckhamo-server",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
+  "engines": {
+    "node": "16.15.1",
+    "npm": "8.11.0"
+  },
   "scripts": {
     "build": "babel src -d dist",
     "start": "node dist/app.js",
