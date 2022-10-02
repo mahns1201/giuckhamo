@@ -22,7 +22,7 @@ code {
     top: 0;
 
     nav {
-      width: 1440px;
+      width: max-width;
       height: 100%;
       margin: 0 auto;
       display: flex;
@@ -43,6 +43,9 @@ code {
   }
 
   .contents {
+    width: max-width;
+    margin: 0 auto;
+
     min-height: calc(100vh - 500px);
 
     //temp
