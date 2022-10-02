@@ -1,0 +1,26 @@
+header {
+  position: sticky;
+  height: 100px;
+  top: 0;
+  background-color: $color__primary;
+
+  .layout {
+    width: $layout-width;
+    height: 100%;
+    margin: 0 auto;
+    // padding: 0 $layout-padding;
+    background-color: $color__primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 10px;
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+}

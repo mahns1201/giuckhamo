@@ -1,0 +1,11 @@
+footer {
+  height: 400px;
+  background-color: $color__secondary;
+
+  nav {
+    width: $layout-width;
+    height: 100%;
+    margin: 0 auto;
+    background-color: $color__secondary;
+  }
+}

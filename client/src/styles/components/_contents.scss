@@ -1,0 +1,40 @@
+.contents {
+  width: $layout-width;
+  min-height: calc(100vh - 500px);
+  margin: 0 auto;
+
+  .test1 {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-color: #fd6d62;
+  }
+
+  .test2 {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-color: #ff7f50;
+  }
+
+  .test3 {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-color: #ffdd80;
+  }
+
+  .test4 {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-color: #bbebd9;
+  }
+
+  .test5 {
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    background-color: #c6f0ff;
+  }
+}
