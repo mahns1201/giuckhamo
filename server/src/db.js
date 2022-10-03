@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
+// require('dotenv').config();
 
-mongoose.connect(
-  'mongodb+srv://mahns:zkwn1542@cluster0.dtqis.mongodb.net/giuckhamo?retryWrites=true&w=majority',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  },
-);
+const MONGODB_URI = process.env.MONGODB_URI;
+console.log(MONGODB_URI);
+mongoose.connect(MONGODB_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
 
 const db = mongoose.connection;
 

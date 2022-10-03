@@ -1,8 +1,10 @@
+import './dotenv';
 import fastify from 'fastify';
 import cors from '@fastify/cors';
+import './db';
 
 import homeRoutes from './routers/homeRouter.js';
-import './db';
+
 /**
  * @type {import('fastify').FastifyInstance} Instance of Fastify
  */
