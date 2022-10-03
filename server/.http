@@ -1,0 +1,15 @@
+GET http://127.0.0.1:5000/
+content-type: application/json 
+
+###
+
+POST http://127.0.0.1:5000/
+content-type: application/json 
+
+{
+  "x": 36.34699,
+  "y": 127.99598,
+  "name": "mongo test 3",
+  "href": "https://unsplash.com/"
+}
+
