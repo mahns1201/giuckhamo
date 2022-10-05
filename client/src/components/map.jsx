@@ -3,6 +3,12 @@ import React, { useEffect } from 'react';
 
 const Map = () => {
   useEffect(() => {
+    const url = `${process.env.REACT_APP_SERVER_URL}/marker`;
+    const options = { method: 'GET' };
+    fetch(url, options)
+      .then(async (response) => console.log('response:', await response.json()))
+      .catch((error) => console.log('error:', error));
+
     const mapContainer = document.getElementById('map'); // 지도를 표시할 div
     const mapOption = {
       center: new kakao.maps.LatLng(36.07018, 127.07011), // 지도의 중심좌표
