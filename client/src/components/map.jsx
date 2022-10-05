@@ -5,6 +5,8 @@ const Map = () => {
   useEffect(() => {
     const url = `${process.env.REACT_APP_SERVER_URL}/marker`;
     const options = { method: 'GET' };
+
+    // fetch
     fetch(url, options)
       .then(async (response) => console.log('response:', await response.json()))
       .catch((error) => console.log('error:', error));
