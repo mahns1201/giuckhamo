@@ -15,13 +15,13 @@ async function homeRoutes(fastify, options) {
     return { hello: 'world' };
   });
 
-  fastify.post('/', async (request, reply) => {
-    console.log('exec post');
-    const { body } = request;
-    await insertMarker(body);
-    // console.log(request.body);
-    return { hello: 'world' };
-  });
+  // fastify.post('/', async (request, reply) => {
+  //   console.log('exec post');
+  //   const { body } = request;
+  //   await insertMarker(body);
+  //   // console.log(request.body);
+  //   return { hello: 'world' };
+  // });
 }
 
 export default homeRoutes;

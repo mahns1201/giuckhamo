@@ -1,15 +1,16 @@
-import Marker from '../models/marker';
+import Marker from '../models/marker.js';
 
-// export const getMarkers = async (req, reply) => {
-//   try {
-//     console.log('execute getMarkers');
-//     const markers = await Marker.find();
-//     return markers;
-//   } catch (error) {
-//     console.log(error);
-//     throw new Error();
-//   }
-// };
+export const getMarkers = async () => {
+  try {
+    console.log('execute getMarkers: ', Marker);
+    const markers = await Marker.find({});
+    console.log({ markers });
+    return markers;
+  } catch (error) {
+    console.error(error);
+    throw new Error(error.message);
+  }
+};
 
 // exports.getMarker = async (req, reply) => {
 //   try {
