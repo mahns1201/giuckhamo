@@ -7,21 +7,9 @@ import { getMarkers, insertMarker } from '../controllers/markerController';
  */
 async function homeRoutes(fastify, options) {
   fastify.get('/', async (request, reply) => {
-    // console.log('start homeRoute', request);
-    // const markers = await getMarkers();
-    // console.log(markers);
-    // return markers;
 
     return { hello: 'world' };
   });
-
-  // fastify.post('/', async (request, reply) => {
-  //   console.log('exec post');
-  //   const { body } = request;
-  //   await insertMarker(body);
-  //   // console.log(request.body);
-  //   return { hello: 'world' };
-  // });
 }
 
 export default homeRoutes;

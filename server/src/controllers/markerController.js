@@ -12,16 +12,6 @@ export const getMarkers = async () => {
   }
 };
 
-// exports.getMarker = async (req, reply) => {
-//   try {
-//     const id = req.params.id
-//     const car = await Car.findById(id)
-//     return car
-//   } catch (err) {
-//     throw boom.boomify(err)
-//   }
-// }
-
 export const insertMarker = async (req, reply) => {
   try {
     const marker = new Marker(req);

@@ -8,10 +8,7 @@ import Marker from '../models/marker';
 async function markerRoutes(fastify, options) {
   fastify.get('/marker', async (request, reply) => {
     const result = await Marker.find({});
-    // console.log('start homeRoute', request);
-    // const markers = await getMarkers();
-    // console.log({ markers });
-    // return markers;
+   
     return result;
   });
 
