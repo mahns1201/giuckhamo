@@ -1,8 +1,15 @@
+// common
 @import './common/_reset.scss';
 @import './common/_variables.scss';
+
+// components
 @import './components/_header.scss';
 @import './components/_contents.scss';
 @import './components/_footer.scss';
+
+// pages
+@import './pages/login.scss';
+
 
 body {
   margin: 0;

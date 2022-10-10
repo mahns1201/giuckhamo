@@ -1,6 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+
+  const onGoLogin = () => {
+    navigate('/admin/login');
+  };
+
   return (
     <header>
       <nav className="layout">
@@ -11,7 +18,7 @@ const Header = () => {
           <li>TAB3</li>
         </ul>
         <ul>
-          <li>로그인</li>
+          <li onClick={onGoLogin}>로그인</li>
           <li>로그아웃</li>
           <li>회원가입</li>
         </ul>
