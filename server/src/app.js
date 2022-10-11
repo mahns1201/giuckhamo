@@ -5,6 +5,8 @@ import './db';
 
 import homeRoutes from './routers/homeRouter.js';
 import markerRoutes from './routers/markerRouter.js';
+import adminRouter from './routers/adminRouter.js';
+
 /**
  * @type {import('fastify').FastifyInstance} Instance of Fastify
  */
@@ -15,6 +17,7 @@ const app = fastify({
 app.register(cors, { origin: '*' });
 app.register(homeRoutes);
 app.register(markerRoutes);
+app.register(adminRouter);
 
 app.listen(
   { port: process.env.PORT || 7700, host: process.env.HOST || '127.0.0.1' },
