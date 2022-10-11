@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { login } from '../../apis/adminApi.js';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -7,16 +8,28 @@ const Login = () => {
     navigate('/');
   };
 
-  const onLogin = () => {
-    console.log('로그인 로직 구현');
+  const onLogin = async () => {
+    const id = document.querySelector('#id').value;
+    const password = document.querySelector('#password').value;
+
+    const loginResult = await login({ id, password });
+
+    if (loginResult.statusCode !== 200) {
+      alert(loginResult.message);
+      return;
+    } else {
+      // 로그인 성공
+      localStorage.setItem('admin', id);
+      navigate('/');
+    }
   };
 
   return (
     <section id="login">
       <div className="container">
         <div className="input">
-          <input type="text" placeholder="ID" />
-          <input type="text" placeholder="PASSWORD" />
+          <input id="id" type="text" placeholder="ID" />
+          <input id="password" type="text" placeholder="PASSWORD" />
         </div>
         <div className="button">
           <button onClick={onCancel}>취소</button>
