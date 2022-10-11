@@ -17,7 +17,7 @@ async function adminRouter(fastify, options) {
 
   fastify.post(`${PRE_FIX}/login`, async (request, reply) => {
     const { body } = request;
-    const result = await login(body);
+    const result = await login(JSON.parse(body));
 
     return result;
   });
