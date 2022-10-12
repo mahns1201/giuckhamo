@@ -25,7 +25,7 @@ const Login = () => {
   };
 
   return (
-    <section id="login">
+    <div id="login">
       <div className="container">
         <div className="input">
           <input id="id" type="text" placeholder="ID" />
@@ -36,7 +36,7 @@ const Login = () => {
           <button onClick={onLogin}>로그인</button>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

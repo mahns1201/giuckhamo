@@ -8,8 +8,8 @@
 @import './components/_footer.scss';
 
 // pages
-@import './pages/login.scss';
-
+@import './pages/admin/_login.scss';
+@import './pages/home/_home.scss';
 
 body {
   margin: 0;
