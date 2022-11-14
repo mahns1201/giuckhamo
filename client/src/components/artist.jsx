@@ -1,13 +1,14 @@
 const Artist = (props) => {
   const {
-    location: { name, imageSrc, href },
+    location: { name, artistImage, href },
   } = props;
 
   return (
     <div id="artist">
-      <div>{name}</div>
-      <div>{imageSrc}</div>
-      <div>{href}</div>
+      <div className="artist__image">
+        <img src={artistImage} alt="artist" />
+      </div>
+      <div className="artist__name">성명: {name}</div>
     </div>
   );
 };

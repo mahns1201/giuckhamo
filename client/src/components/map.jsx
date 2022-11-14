@@ -23,7 +23,7 @@ const Map = () => {
         const map = new kakao.maps.Map(mapContainer, mapOption);
 
         for (let location of locations) {
-          const { place, x, y, href, imageSrc: marketImageSrc } = location;
+          const { place, x, y, href, markerImage: marketImageSrc } = location;
 
           // 마커의 이미지정보
           const imageSrc = marketImageSrc,

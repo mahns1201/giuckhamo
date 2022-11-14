@@ -26,7 +26,11 @@ const ArtistSub = () => {
     <Artist location={location} key={index} />
   ));
 
-  return <div id="artist-sub">{Artists}</div>;
+  return (
+    <div id="artist-sub">
+      <div className="artist__container">{Artists}</div>
+    </div>
+  );
 };
 
 export default ArtistSub;
